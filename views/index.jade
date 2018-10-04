@@ -1,0 +1,51 @@
+doctype html
+html(lang='en').
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Legacy RP - Stats</title>
+
+        <!-- Styling -->
+        <link rel="stylesheet" href="/stylesheets/global.css">
+        <link rel="stylesheet" href="/stylesheets/index.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="header">
+            <!-- Float left -->
+            <div style="float: left">
+                <li><img src="#" alt="Logo"></li>
+            </div>
+            <!-- Float right -->
+            <div style="float: right">
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Coming Soon</a></li>
+            </div>
+        </div>
+
+        <div class="content">
+            <p id="description">
+                You can easily get someone's statistics here by searching for them by their Steam64 id.
+            </p>
+
+            <div id="search">
+                <input type="text" name="steam64" placeholder="Search steam64 id" />
+                <a id="searchBtn" href="javascript:void(0)">Search</a>
+            </div>
+
+            <!-- The results from searching -->
+            <div id="results">
+                <h1>Search Results</h1>
+                <a href="#">Profile</a>
+                <a href="#">Profile</a>
+                <a href="#">Profile</a>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="/javascripts/index.js"></script>
+        
+    </body>

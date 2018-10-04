@@ -1,0 +1,34 @@
+#search {
+    width: 100%;
+}
+
+#search * {
+    padding: 20px;
+}
+
+#search input {
+    width: 80%;
+    font-size: 28px;
+}
+
+#searchBtn {
+    border: 1px solid #41b3f5;
+    background-color: #41b3f5;
+}
+
+#searchBtn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+#results {
+    padding: 20px;
+    display: none; 
+}
+
+#results a {
+    border: 1px solid white;
+    display: block;
+    margin: 20px;
+    padding: 20px;
+}
