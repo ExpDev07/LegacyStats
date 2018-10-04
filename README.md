@@ -1,6 +1,6 @@
 # LegacyStats
 
-LegacyStats is a website developed by ExpDev07 ([Discord](Marius Big Ounce#2997)) that allows users to view statistical data of players on the FiveM roleplay server, LegacyRoleplay. The site is made using [NodeJS](https://nodejs.org/en/) + [Express](https://expressjs.com/) with [Jade](http://jade-lang.com/).
+LegacyStats is a website developed by ExpDev07 ( [Discord](Marius Big Ounce#2997) ) that allows users to view statistical data of players on the FiveM roleplay server, LegacyRoleplay. The site is made using [NodeJS](https://nodejs.org/en/) + [Express](https://expressjs.com/) with [Jade](http://jade-lang.com/).
 
 
 ## Building and Running
