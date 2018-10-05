@@ -1,3 +1,6 @@
+// Formats money to something more readable. For example, "1000" becomes "1,000".
+- function formatMoney(money) { return (money).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); }
+
 doctype html
 html(lang='en').
     <head>
@@ -16,7 +19,7 @@ html(lang='en').
         <div class="header">
             <!-- Float left -->
             <div style="float: left">
-                <li><img src="#" alt="Legacy Roleplay"></li>
+                <li><img src="/img/logo.bmp" alt="Legacy Roleplay"></li>
             </div>
             <!-- Float right -->
             <div style="float: right">
@@ -34,12 +37,14 @@ html(lang='en').
             </p>
 
             <div id="stats">
-                <li>Cash: <span>$#{data.money}</span></li>
-                <li>Bank Account: <span>$#{data.bank}</span></li>
+                <li>Cash: <span>$#{formatMoney(data.money)}</span></li>
+                <li>Bank Account: <span>$#{formatMoney(data.bank)}</span></li>
                 <li>Job: <span>#{data.job}</span></li>
+                <li>Job Rank: <span>#{data.job_grade}</span></li>
                 <li>Group: <span>#{data.group}</span></li>
                 <li>Is Dead: <span>No</span></li>
                 <li>Pet: <span>#{data.pet}</span></li>
+                <li>Height: <span>#{data.height}</span></li>
             </div>
 
             <p>
