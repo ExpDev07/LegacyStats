@@ -10,12 +10,12 @@ html, body {
 }
 
 html {
-    background: url(/img/gta-5-bg-blurred.jpg) no-repeat center center fixed; 
+    background-color: #202020;
     background-size: cover;
 }
 
 body {
-    padding: 5vw 13vw 0 13vw;
+    padding: 5vw 8vw 0 8vw;
     font-size: 24px;
     text-align: center;
 }
@@ -25,18 +25,22 @@ a {
 }
 
 a:hover {
-    color: #41b3f5;
+    color: darkslateblue;
 }
 
 input {
     color: black;
 }
 
+.header {
+
+}
+
 .header li {
     display: inline-block;
-    margin: 20px;
+    margin-left: 32px;
 }
 
 .content {
-    margin: 10vw;
+    margin: 8vw 5vw 0 5vw;
 }

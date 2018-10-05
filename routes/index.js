@@ -6,19 +6,18 @@ router.get('/', function (req, res, next) {
     res.render('index');
 });
 
-// Module for http requests
-const request = require('request');
+// User data
+const UserData = require('./lib/UserData');
 
-/* Profile get */
 router.get('/:steam64', function(req, res, next) {
-  // The steam64 for the profile
-  var steam64 = req.params.steam64;
+    // Get steam64
+    var steam64 = req.params.steam64;
 
-    // Make a request to our API
-    request('0.0.0.0:3000/api/' + steam64, { json: true }, (err, re, body) => {
-      if (err) return console.log(err);
-      console.log(body);
-      res.render("profile", body);
+    // Load a user's data from the database
+    var data = new UserData(steam64);
+    data.loadData((err, data) => {
+        if (err) return res.send(404, 'Profile not found!');
+        res.render('profile', data);
     });
 });
 

@@ -1,0 +1,21 @@
+#stats {
+    padding: 24px;
+    background-color: darkslateblue;
+}
+
+#stats li {
+    background-color: #5f53ad;    
+    padding: 12px;
+    margin: 12px;
+    display: inline-block;
+    width: 45%;
+}
+
+#stats li span {
+    font-weight: bold;
+    color: coral;
+}
+
+#gender {
+    text-transform: uppercase;
+}

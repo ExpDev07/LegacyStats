@@ -11,23 +11,22 @@ class UserData {
 
     /**
      * Loads data from the database
+     * 
+     * @param {function} finished Callback when finished
      */
     loadData(finished) {
         // Select from database
-        console.log('Loading data...');
+        console.log('Loading data for ' + this.steam64);
         db.query(`SELECT * FROM users WHERE identifier = 'steam:${this.steam64}'`, (err, results) => {
-            if (results.length == 0) return console.log('User not found');
+            // Handle user not being found
+            if (results.length == 0) return finished(true, null);
 
             // Set data and call finished
             this.data = results[0];
-            finished(this);
+            return finished(false, this);
         });
     }
 
-}
-
-function getSteamId(identifier) {
-    return identifier.split(':')[1];
 }
 
 module.exports = UserData;

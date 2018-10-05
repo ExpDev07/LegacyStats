@@ -20,14 +20,32 @@ html(lang='en').
             </div>
             <!-- Float right -->
             <div style="float: right">
-                <li><a href="#">Forums</a></li>
+                <li><a href="https://legacyroleplay.online/">Forums</a></li>
                 <li><a href="#">Coming Soon</a></li>
             </div>
         </div>
 
         <div class="content">
-            <h1>#{steam64}</h1>
-            <p>This is a profile page</p>
+            <h1>#{data.name}</h1>
+            <hr/>
+            <p>
+                #{data.firstname} #{data.lastname} is a <span id="gender">#{data.sex}</span> and was born at #{data.dateofbirth}. You
+                can reach them at #{data.phone_number}.
+            </p>
+
+            <div id="stats">
+                <li>Cash: <span>$#{data.money}</span></li>
+                <li>Bank Account: <span>$#{data.bank}</span></li>
+                <li>Job: <span>#{data.job}</span></li>
+                <li>Group: <span>#{data.group}</span></li>
+                <li>Is Dead: <span>No</span></li>
+                <li>Pet: <span>#{data.pet}</span></li>
+            </div>
+
+            <p>
+                <span style="color: red">Warning:</span> Information displayed here should not be used for in-game purposes unless explicitly told by that
+                person. Doing so would fall under metagaming, which is a violation of the server rules.
+            </p>
         </div>
 
         <!-- Scripts -->

@@ -12,23 +12,30 @@
 }
 
 #searchBtn {
-    border: 1px solid #41b3f5;
-    background-color: #41b3f5;
+    border: 1px solid darkslateblue;
+    background-color: darkslateblue;
 }
 
 #searchBtn:hover {
-    background-color: transparent;
     color: white;
+    background-color: #5f53ad;
 }
 
 #results {
-    padding: 20px;
+    margin: 64px;
+    padding: 24px;
+    background-color: darkslateblue;
     display: none; 
 }
 
 #results a {
-    border: 1px solid white;
+    background-color: #5f53ad;    
+    padding: 12px;
+    margin: 24px;
     display: block;
-    margin: 20px;
-    padding: 20px;
+}
+
+#results a:hover {
+    color: white;
+    background-color: coral;
 }
