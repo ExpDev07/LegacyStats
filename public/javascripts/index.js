@@ -19,7 +19,7 @@ function onSearchClick(e) {
     // Collect users
     getUsersFromQuery($("#query").val(), function(data) {
         // Append results
-        data.forEach(user => results.append('<a href="/' + extractSteam64Id(user.identifier) + '">' + user.name + ' - ' + user.firstname + ' ' + user.lastname + '</a>'));
+        data.forEach(user => results.append('<a href="/' + extractSteam16Id(user.identifier) + '">' + user.name + ' - ' + user.firstname + ' ' + user.lastname + '</a>'));
         results.slideDown();
     });
 }
@@ -31,19 +31,14 @@ function onSearchClick(e) {
  * @param {function} callback Callback when results are receieved
  */
 function getUsersFromQuery(query, callback) {
-    $.getJSON('/api/users/' + query.toLowerCase(),
-        function (data, textStatus, jqXHR) {
-            // Callback!
-            return callback(data);
-        }
-    );
+    $.getJSON('/api/' + query.toLowerCase(), data => callback(data));
 }
 
 /**
- * Extracts the steam64 from an identifier
+ * Extracts the steam16 from an identifier
  * 
  * @param {string} identifier Identifier to extract from
  */
-function extractSteam64Id(identifier) {
+function extractSteam16Id(identifier) {
     return identifier.split(':')[1];
 }
